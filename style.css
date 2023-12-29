@@ -1,0 +1,170 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+#billboard{
+    height: 100vh;
+    background-image: url(./assets/bg.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    background: rgba(0, 0, 0, 0.5);
+    min-width: 100vw;
+}
+.banner-content h1{
+    font-size: 25px;
+    font-weight: 400;
+    color: #E5BD54;
+}
+.banner-content h3{
+    font-size: 15px;
+    color: #E5BD54;
+    font-weight: 400;
+}
+.banner-content{
+    padding-top: 20px;
+}
+.banner-title{
+    font-size: 30px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+}
+
+
+.quote-container {
+    margin: 20px 0;
+}
+
+.quote {
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #E5BD54;
+}
+
+.logo{
+    width: 25%;
+    height: auto;
+    justify-items: center;
+}
+
+.gift{
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: auto;
+}
+.gift img{
+    z-index: 1;
+}
+
+.gift:active{
+    transform: scale(0.96);
+}
+.gift::before,
+.gift::after{
+    content:"";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.gift.animate::before{
+    top: -2%;
+    right: -5%;
+    background-image: radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #FFD700  20%, transparent 30%),
+    radial-gradient(circle, #FFD700 20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7D0A0A 15%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle,#FFD700  20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 30% 30%,
+    10% 10%, 18% 18%;
+    animation: topBubbles ease-in-out 0.6s forwards infinite;
+}
+@keyframes topBubbles{
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+          40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+          50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+          50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+.gift.animate::after{
+    bottom: -10%;
+    right: -5%;
+    background-image: radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, #FFD700  20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7D0A0A 15%, transparent 20%),
+    radial-gradient(circle, #FFD700 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #FFD700  15%, transparent 30%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, #FFD700 20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%),
+    radial-gradient(circle, #7D0A0A 20%, transparent 20%);
+    background-size:20% 20%, 15% 15%, 20% 20%, 18% 18%, 15% 15%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    animation: bottomBubbles ease-in-out 0.6s forwards infinite;
+}
+@keyframes bottomBubbles{
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+          70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+          105% 0%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+          110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.animate__animated.animate__pulse {
+    --animate-duration: 2s;
+  }
+.animate__animated.animate__heartBeat {
+    --animate-duration: 1s;
+}
+.stars{
+    margin-left: -50px;
+    width: 40%;
+    height: auto;
+    position: fixed;
+}
+
+@media screen and (min-width: 600px){
+    .logo{
+        width: 6%;
+    }
+    .banner-content{
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .logo{
+        width: 6%;
+    }
+    .banner-content{
+        padding-top: 100px;
+    }
+}
